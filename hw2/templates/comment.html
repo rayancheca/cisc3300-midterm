@@ -1,0 +1,95 @@
+<!--<!DOCTYPE html>
+<html>
+
+<body>
+    <form action="{{ url_for('add_comment') }}" method="POST">
+        <h3>Enter Your Comment</h3>
+        Name<br>
+        <input type="text" name="nm" /></br>
+
+        Comment<br>
+        <textarea name="comment"></textarea><br>
+
+        <input type="submit" value="submit" /><br>
+    </form>
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        form {
+            width: 50%;
+            /* Adjust as needed */
+            padding: 40px;
+            /* Adjust as needed */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+        
+        input[type=submit] {
+            background-color: orange;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        input[type=submit]:hover {
+            background-color: darkorange;
+        }
+        
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: orange;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="{{ url_for('add_comment') }}" method="POST">
+        <h3>Enter Your Comment</h3>
+        Name<br>
+        <input type="text" name="nm" /><br> Comment
+        <br>
+        <textarea name="comment"></textarea><br>
+        <input type="submit" value="Submit" /><br>
+        <a href="{{ url_for('index') }}">Go back to main page</a>
+    </form>
+
+</body>
+
+</html>

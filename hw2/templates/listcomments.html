@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-sizing: border-box;
+        }
+        
+        th,
+        td {
+            border: 2px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: orange;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            margin-right: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            /*  float: right;*/
+            clear: both;
+            border-radius: 10px;
+        }
+        
+        .btn:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{row["name"]}}</td>
+                <td>{{row["comment"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align: right; clear: both;">
+        <a class="btn" href="{{ url_for('index') }}">Go back to main page</a>
+    </div>
+</body>
+
+</html>
